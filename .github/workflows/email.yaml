@@ -19,8 +19,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: hugahugalulu3@gmail.com
-          password: CommonAccount@123
+          username: hugahugalulu2@gmail.com
+          password: TestAccount@123
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           to: sarthak.narayan.nitt@gmail.com
