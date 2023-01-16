@@ -12,3 +12,16 @@ jobs:
 
       - name: Hello World
         run: echo Hello, world!
+      
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: hugahugalulu3@gmail.com
+          password: CommonAccount@123
+          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          to: sarthak.narayan.nitt@gmail.com
+          from: Test Account
