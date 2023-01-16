@@ -13,9 +13,6 @@ jobs:
       - name: Hello World
         run: echo hello world
       
-      - name: check failure
-        run: echo failure()
-      
       - name: Send mail
         if: failure()
         uses: dawidd6/action-send-mail@v2
