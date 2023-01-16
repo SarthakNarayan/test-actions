@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hello World
-        run: echo hello world
+        run: echo hello world && exit 1
       
-      - name: Send mail
+      - name: Send email on failure
         if: failure()
-        uses: dawidd6/action-send-mail@v2
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
