@@ -11,10 +11,13 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hello World
-        run: echo "${{ toJson(github) }}"
+        run: echo hello world
+      
+      - name: check failure
+        run: echo ${{ failure() }}
       
       - name: Send mail
-        if: always()
+        if: failure()
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: smtp.gmail.com
