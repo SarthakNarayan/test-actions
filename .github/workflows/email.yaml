@@ -14,10 +14,10 @@ jobs:
         run: echo hello world
       
       - name: check failure
-        run: echo ${{ failure() }}
+        run: echo failure()
       
       - name: Send mail
-        if: ${{ failure() }}
+        if: failure()
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: smtp.gmail.com
